@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>pixelkeg</title>
+	<meta name="author" content="Glenn Gentzke">
+	<link href="pk_base.css" rel="stylesheet" type="text/css" />
+	
+	<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-27242984-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
+</head>
+<body>
+  
+  <div id="logo_container" class="centered_container">
+    <a href="http://pixelkeg.com" alt="home" class="img_link">
+      <img src="images/pk_icon.png" class="centered_image small" />
+    </a>
+  </div>
+  
+  <div class="centered_container">
+    <h1>Acts as Setlist</h1>
+    <p>
+      <b>acts_as_setlist</b> is a ruby gem loosely based on the famous acts_as_list gem.  The similarities end at the ability to order items in a list - and that's where the fun begins.  The impetus for this project is a desire for a simple web app that can generate setlists for my bands that go beyond random lists of songs.  I hope it can be expanded to accept arbitrary heuristics applied to subsets of items in a setlist.
+    </p>
+    <p>
+      The planned featureset of <b>acts_as_list</b> includes the following:<br/>
+    </p>
+    <ul>
+      <li>Order items under a setlist (ala acts_as_list)</li>
+      <li>Randomly sort items in a setlist</li>
+      <li>Apply constraints that alter the item ordering relative to position in the setlist [opener|closer]</li>
+      <li>Apply constraints that alter the item position relative to another item [couplets|triplets]</li>
+      <li>Apply constraints to a setlist that alter the ordering [group by]</li>
+    </ul>
+  
+  </div>
+  
+  <div id="footer" class="centered_container">
+    <p class="copyright">&copy;2011 GG</p>
+  </div>
+    
+</body>
+</html>

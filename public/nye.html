@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>pixelkeg loves to party!</title>
+	<meta name="author" content="Glenn Gentzke">
+	<link href="pk_base.css" rel="stylesheet" type="text/css" />
+	<link href="pk_gaddis.css" rel="stylesheet" type="text/css" />
+	
+	<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-27242984-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
+</head>
+<body>
+  <div id="logo_container" class="centered_container">
+    <a href="http://pixelkeg.com" alt="home" class="img_link">
+      <img src="images/pk_icon.png" class="centered_image small" />
+    </a>
+  </div>
+  <div class="centered_container">
+    <h1 class="nye_header">NYC NYE 2011-2012!</h1>
+    <a href="https://www.facebook.com/events/144161799026931/" target="_blank">
+      <h2>Mama's Bar, East Village, 3rd &amp; B, 8pm.</h2>
+    </a>
+    <h2 class="nye_countdown"></h1>
+  </div>
+  
+  <div id="footer" class="centered_container">
+    <p class="copyright">&copy;2011 GG</p>
+  </div>
+    
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+  <script src="http://pixelkeg.com/javascript/jquery.countdown.js"></script>
+  <script>
+    var discoColors = [],
+        countdown_selector = '.nye_countdown';
+    
+    function displayCountdown(periods) {
+      var display = "Down to ",
+          days = periods[3],
+          hours = periods[4],
+          minutes = periods[5],
+          seconds = periods[6],
+          el = $(countdown_selector);
+      if(days == 0 && hours == 0 && minutes == 0 && seconds == 0) {
+        display += "PARTYTIME!!!!!";
+        // GO INTO DISCOMODE!!!!
+        setInterval(function(){
+          el.css("color",randomDisco());
+        }, 500);
+      } else {
+        display += days + ' days ' + hours + ' hours ' + minutes + ' minutes ' + seconds + ' seconds!';
+      }
+      el.text(display);
+    }
+    
+    function randomDisco() {
+      //  should select random color
+      return "#FF0000";
+    }
+    
+    function updateTimer(selector) {
+      var endDT = new Date(2011,11,31,20,00,00),
+          el = $(selector);
+      el.countdown({ until: endDT, onTick: displayCountdown });
+    }
+    
+    $(document).ready(function(){
+      updateTimer(countdown_selector);
+    });
+  </script>
+  
+</body>
+</html>
